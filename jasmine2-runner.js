@@ -185,7 +185,7 @@ function processPage(status, page, resultsKey) {
                     output;
                 for (var filename in xml_results) {
                     if (xml_results.hasOwnProperty(filename) && (output = xml_results[filename]) && typeof(output) === "string") {
-                        fs.write(filename, output, "w");
+                        fs.write('log/junit/' + filename, output, "w");
                     }
                 }
 
